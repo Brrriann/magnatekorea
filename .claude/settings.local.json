@@ -12,7 +12,11 @@
       "Bash(netstat -ano)",
       "Bash(taskkill /PID 15348 /F)",
       "Bash(kill -9 15348)",
-      "Bash(git add -A)"
+      "Bash(git add -A)",
+      "Bash(git commit:*)",
+      "Bash(git push origin main)",
+      "Bash(gh repo view --json name,url,owner)",
+      "Bash(npm install -g wrangler)"
     ]
   },
   "enabledPlugins": {
