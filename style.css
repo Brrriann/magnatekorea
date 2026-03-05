@@ -870,7 +870,7 @@ section.dark-bg {
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: var(--space-md);
-    color: var(--color-tertiary);
+    color: #FFFFFF;
     letter-spacing: var(--letter-spacing-normal);
     line-height: var(--line-height-tight);
 }
