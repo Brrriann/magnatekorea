@@ -119,7 +119,7 @@ section.dark-bg {
 }
 
 .dark-bg .section-header h2 {
-    color: var(--color-tertiary);
+    color: #FFFFFF;
 }
 
 .dark-bg .section-header p {
@@ -296,6 +296,7 @@ section.dark-bg {
     line-height: var(--line-height-tight);
     margin-bottom: var(--space-lg);
     letter-spacing: var(--letter-spacing-tight);
+    color: #FFFFFF;
 }
 
 .hero-title .gradient-text {
@@ -527,14 +528,14 @@ section.dark-bg {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(26, 26, 26, 0.85);
+    background: rgba(26, 26, 26, 0.95);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     opacity: 0;
     transition: opacity var(--transition);
-    color: var(--color-tertiary);
+    color: #FFFFFF;
 }
 
 .portfolio-item:hover .portfolio-overlay {
@@ -674,7 +675,7 @@ section.dark-bg {
 }
 
 .contact .section-header h2 {
-    color: var(--color-tertiary);
+    color: #FFFFFF;
 }
 
 .contact .section-header p {
@@ -704,7 +705,7 @@ section.dark-bg {
     padding: var(--space-md);
     border: 1px solid rgba(255, 255, 255, 0.2);
     background: rgba(255, 255, 255, 0.1);
-    color: var(--color-tertiary);
+    color: #FFFFFF;
     border-radius: 4px;
     font-family: var(--font-body);
     transition: all var(--transition);
@@ -712,7 +713,7 @@ section.dark-bg {
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .contact-form input:focus,
@@ -828,7 +829,7 @@ section.dark-bg {
     text-align: center;
     padding-top: var(--space-lg);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.9);
     font-size: var(--size-small);
 }
 
@@ -875,7 +876,7 @@ section.dark-bg {
 }
 
 .service-card p {
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.95);
     margin-bottom: var(--space-lg);
     font-size: 1rem;
     line-height: var(--line-height-loose);
