@@ -3,30 +3,43 @@
 /* 컬러 팔레트 */
 :root {
     /* Primary Colors */
-    --color-primary: #1A1A1A;          /* 깊은 검은색 - 신뢰감 */
-    --color-accent: #FF6B35;           /* 비비드 오렌지 - 창의성 */
-    --color-secondary: #2D2D2D;        /* 차콜 그레이 - 배경 */
+    --color-primary: #0F0F0F;          /* 진한 검은색 - 프리미엄 느낌 */
+    --color-accent: #00FF41;           /* 네온 그린 - 현대적 창의성 */
+    --color-accent-light: #00FF88;     /* 밝은 네온 그린 - 강조 */
+    --color-accent-dark: #00CC33;      /* 다크 네온 그린 - 호버 */
+    --color-secondary: #1A1A1A;        /* 다크 차콜 - 배경 */
     --color-tertiary: #FFFFFF;         /* 화이트 - 텍스트/카드 */
-    --color-neutral: #666666;          /* 미드 그레이 - 보조 텍스트 */
+    --color-neutral: #888888;          /* 밝은 그레이 - 보조 텍스트 */
+    --color-neutral-light: #AAAAAA;    /* 라이트 그레이 */
 
     /* Additional Colors */
-    --color-light-bg: #F5F5F5;         /* 라이트 배경 */
-    --color-border: #E5E5E5;           /* 보더 */
-    --color-success: #4CAF50;          /* 성공 */
-    --color-error: #F44336;            /* 에러 */
+    --color-light-bg: #F8F8F8;         /* 라이트 배경 */
+    --color-border: #E0E0E0;           /* 보더 */
+    --color-success: #00FF41;          /* 성공 - 네온 그린 */
+    --color-error: #FF3333;            /* 에러 - 빨간색 */
 
     /* Typography */
     --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Noto Sans KR', sans-serif;
     --font-accent: 'Playfair Display', serif;
 
-    /* Font Sizes */
-    --size-h1: 3.5rem;
-    --size-h2: 2.5rem;
-    --size-h3: 2rem;
-    --size-h4: 1.5rem;
-    --size-body: 1rem;
-    --size-small: 0.875rem;
+    /* Font Sizes - 최적화 */
+    --size-h1: 3.75rem;
+    --size-h2: 2.75rem;
+    --size-h3: 2.125rem;
+    --size-h4: 1.625rem;
+    --size-body: 1.0625rem;
+    --size-small: 0.9375rem;
+
+    /* Line Heights - 한글 가독성 최적화 */
+    --line-height-tight: 1.4;
+    --line-height-normal: 1.75;
+    --line-height-loose: 2.0;
+
+    /* Letter Spacing */
+    --letter-spacing-tight: -0.5px;
+    --letter-spacing-normal: 0px;
+    --letter-spacing-loose: 0.5px;
 
     /* Spacing */
     --space-xs: 0.5rem;
@@ -37,8 +50,8 @@
     --space-2xl: 4rem;
 
     /* Transitions */
-    --transition: 0.3s ease;
-    --transition-slow: 0.6s ease;
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ==================== 기본 스타일 ==================== */
@@ -56,8 +69,11 @@ body {
     font-family: var(--font-body);
     color: var(--color-primary);
     background-color: var(--color-tertiary);
-    line-height: 1.6;
+    line-height: var(--line-height-normal);
+    letter-spacing: var(--letter-spacing-normal);
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -90,12 +106,16 @@ section.dark-bg {
     font-weight: 700;
     margin-bottom: var(--space-md);
     color: var(--color-primary);
+    letter-spacing: var(--letter-spacing-tight);
+    line-height: var(--line-height-tight);
 }
 
 .section-header p {
-    font-size: var(--size-h4);
+    font-size: 1.1875rem;
     color: var(--color-neutral);
-    font-weight: 300;
+    font-weight: 400;
+    line-height: var(--line-height-normal);
+    letter-spacing: var(--letter-spacing-normal);
 }
 
 .dark-bg .section-header h2 {
@@ -124,14 +144,16 @@ section.dark-bg {
 .btn-primary,
 .cta-button {
     background-color: var(--color-accent);
-    color: var(--color-tertiary);
+    color: var(--color-primary);
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .btn-primary:hover,
 .cta-button:hover {
-    background-color: #E85B2D;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(255, 107, 53, 0.3);
+    background-color: var(--color-accent-light);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(0, 255, 65, 0.25);
 }
 
 .btn-outline {
@@ -271,23 +293,25 @@ section.dark-bg {
     font-family: var(--font-heading);
     font-size: var(--size-h1);
     font-weight: 700;
-    line-height: 1.2;
+    line-height: var(--line-height-tight);
     margin-bottom: var(--space-lg);
-    letter-spacing: -2px;
+    letter-spacing: var(--letter-spacing-tight);
 }
 
 .hero-title .gradient-text {
-    background: linear-gradient(135deg, var(--color-accent) 0%, #FF8A50 100%);
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .hero-subtitle {
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.3125rem;
+    color: rgba(255, 255, 255, 0.95);
     margin-bottom: var(--space-xl);
-    line-height: 1.8;
+    line-height: var(--line-height-loose);
+    letter-spacing: var(--letter-spacing-normal);
+    font-weight: 400;
 }
 
 .hero .cta-button {
@@ -362,41 +386,52 @@ section.dark-bg {
 
 .about-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
     margin-bottom: var(--space-2xl);
 }
 
 .about-card {
     background: var(--color-tertiary);
-    padding: var(--space-xl);
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: var(--space-xl) var(--space-lg);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
     transition: all var(--transition);
     text-align: center;
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .about-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(255, 107, 53, 0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(0, 255, 65, 0.12);
+    border-color: var(--color-accent);
 }
 
 .card-icon {
-    font-size: 3rem;
-    margin-bottom: var(--space-md);
+    font-size: 3.5rem;
+    margin-bottom: var(--space-lg);
+    line-height: 1;
 }
 
 .about-card h3 {
     font-family: var(--font-heading);
     font-size: var(--size-h4);
     color: var(--color-primary);
-    margin-bottom: var(--space-sm);
-    font-weight: 600;
+    margin-bottom: var(--space-md);
+    font-weight: 700;
+    letter-spacing: var(--letter-spacing-tight);
+    line-height: var(--line-height-tight);
 }
 
 .about-card p {
     color: var(--color-neutral);
-    line-height: 1.8;
+    line-height: var(--line-height-loose);
+    font-size: 1rem;
+    letter-spacing: var(--letter-spacing-normal);
+    flex-grow: 1;
 }
 
 /* Mission/Vision */
@@ -444,21 +479,26 @@ section.dark-bg {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
 }
 
 .portfolio-item {
     background: var(--color-light-bg);
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
     transition: all var(--transition);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .portfolio-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(255, 107, 53, 0.2);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(0, 255, 65, 0.12);
+    border-color: var(--color-accent);
 }
 
 .portfolio-image {
@@ -511,34 +551,42 @@ section.dark-bg {
 
 .portfolio-info {
     padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .portfolio-info h4 {
     font-family: var(--font-heading);
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     color: var(--color-primary);
     margin-bottom: var(--space-sm);
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: var(--letter-spacing-normal);
+    line-height: var(--line-height-tight);
 }
 
 .portfolio-category {
     color: var(--color-neutral);
-    font-size: var(--size-small);
+    font-size: 0.9375rem;
     margin-bottom: var(--space-sm);
+    font-weight: 500;
 }
 
 .portfolio-story {
     color: var(--color-accent);
     font-style: italic;
-    font-size: 0.95rem;
-    margin: var(--space-sm) 0;
-    line-height: 1.6;
+    font-size: 1rem;
+    margin: var(--space-md) 0;
+    line-height: var(--line-height-loose);
+    flex-grow: 1;
 }
 
 .portfolio-result {
-    color: var(--color-primary);
-    font-weight: 600;
-    font-size: var(--size-small);
+    color: var(--color-accent);
+    font-weight: 700;
+    font-size: 0.9375rem;
+    margin-top: auto;
 }
 
 /* ==================== Team 섹션 ==================== */
@@ -548,37 +596,42 @@ section.dark-bg {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--space-xl);
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
 }
 
 .team-member {
     background: var(--color-tertiary);
-    padding: var(--space-xl);
-    border-radius: 8px;
+    padding: var(--space-xl) var(--space-lg);
+    border-radius: 12px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
     transition: all var(--transition);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .team-member:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(255, 107, 53, 0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(0, 255, 65, 0.12);
+    border-color: var(--color-accent);
 }
 
 .member-avatar {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     margin: 0 auto var(--space-lg);
-    background: linear-gradient(135deg, var(--color-accent) 0%, #FF8A50 100%);
-    color: var(--color-tertiary);
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+    color: var(--color-primary);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .team-member h4 {
@@ -778,23 +831,27 @@ section.dark-bg {
 /* ==================== Services 섹션 ==================== */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-lg);
 }
 
 .service-card {
     background: rgba(255, 255, 255, 0.05);
-    padding: var(--space-xl);
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--space-xl) var(--space-lg);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
     text-align: center;
     transition: all var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .service-card:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
     border-color: var(--color-accent);
-    transform: translateY(-8px);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 255, 65, 0.15);
 }
 
 .service-icon {
@@ -805,17 +862,20 @@ section.dark-bg {
 
 .service-card h3 {
     font-family: var(--font-heading);
-    font-size: var(--size-h4);
-    font-weight: 600;
+    font-size: 1.25rem;
+    font-weight: 700;
     margin-bottom: var(--space-md);
     color: var(--color-tertiary);
+    letter-spacing: var(--letter-spacing-normal);
+    line-height: var(--line-height-tight);
 }
 
 .service-card p {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.85);
     margin-bottom: var(--space-lg);
-    font-size: var(--size-small);
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: var(--line-height-loose);
+    flex-grow: 1;
 }
 
 .service-link {
@@ -1251,11 +1311,22 @@ section.dark-bg {
     }
 }
 
+@media (max-width: 1024px) {
+    .about-grid,
+    .portfolio-grid,
+    .services-grid,
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     :root {
         --size-h1: 2.5rem;
         --size-h2: 1.875rem;
         --size-h3: 1.5rem;
+        --size-h4: 1.375rem;
+        --size-body: 1rem;
     }
 
     section {
@@ -1266,27 +1337,17 @@ section.dark-bg {
         padding: 0 var(--space-md);
     }
 
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-
+    .about-grid,
+    .portfolio-grid,
+    .services-grid,
+    .team-grid,
+    .stats-grid,
+    .news-grid,
     .clients-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
-    .news-grid {
-        grid-template-columns: 1fr;
+    .hero-title {
+        font-size: 2rem;
     }
 }
