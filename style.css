@@ -527,8 +527,16 @@ section.dark-bg {
     margin-bottom: var(--space-sm);
 }
 
-.portfolio-result {
+.portfolio-story {
     color: var(--color-accent);
+    font-style: italic;
+    font-size: 0.95rem;
+    margin: var(--space-sm) 0;
+    line-height: 1.6;
+}
+
+.portfolio-result {
+    color: var(--color-primary);
     font-weight: 600;
     font-size: var(--size-small);
 }
@@ -592,6 +600,14 @@ section.dark-bg {
     color: var(--color-neutral);
     font-size: var(--size-small);
     display: block;
+}
+
+.member-philosophy {
+    margin-top: var(--space-md);
+    font-style: italic;
+    color: var(--color-accent);
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 /* ==================== Contact 섹션 ==================== */
