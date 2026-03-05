@@ -578,7 +578,7 @@ section.dark-bg {
 
 .portfolio-story {
     color: var(--color-accent);
-    font-style: italic;
+    font-style: normal;
     font-size: 1rem;
     margin: var(--space-md) 0;
     line-height: var(--line-height-loose);
@@ -661,7 +661,7 @@ section.dark-bg {
 
 .member-philosophy {
     margin-top: var(--space-md);
-    font-style: italic;
+    font-style: normal;
     color: var(--color-accent);
     font-size: 0.95rem;
     line-height: 1.6;
@@ -1259,7 +1259,7 @@ section.dark-bg {
 
 .testimonial-text {
     color: rgba(255, 255, 255, 0.9);
-    font-style: italic;
+    font-style: normal;
     margin-bottom: var(--space-md);
     line-height: 1.8;
     font-size: 1rem;
