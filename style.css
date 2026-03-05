@@ -112,7 +112,7 @@ section.dark-bg {
 
 .section-header p {
     font-size: 1.1875rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.9);
     font-weight: 400;
     line-height: var(--line-height-normal);
     letter-spacing: var(--letter-spacing-normal);
@@ -123,7 +123,7 @@ section.dark-bg {
 }
 
 .dark-bg .section-header p {
-    color: #999999;
+    color: rgba(255, 255, 255, 0.85);
 }
 
 /* 버튼 */
@@ -570,7 +570,7 @@ section.dark-bg {
 }
 
 .portfolio-category {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.85);
     font-size: 0.9375rem;
     margin-bottom: var(--space-sm);
     font-weight: 500;
@@ -919,7 +919,7 @@ section.dark-bg {
 }
 
 .stat-label {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.95);
     font-size: 1.1rem;
 }
 
@@ -939,7 +939,7 @@ section.dark-bg {
     padding: var(--space-xl);
     border-radius: 8px;
     text-align: center;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.9);
     font-weight: 600;
     transition: all var(--transition);
     border: 2px solid transparent;
@@ -1023,7 +1023,7 @@ section.dark-bg {
 
 .service-hero p {
     font-size: var(--size-h4);
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.95);
 }
 
 /* 서비스 상세 섹션 */
@@ -1186,7 +1186,7 @@ section.dark-bg {
 
 .portfolio-hero p {
     font-size: var(--size-h4);
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.95);
 }
 
 /* 포트폴리오 섹션 */
