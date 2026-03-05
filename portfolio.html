@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="마그네이트코리아 포트폴리오 - 광고 캠페인 성공 사례 모음">
+    <title>Portfolio | 마그네이트코리아</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ==================== 네비게이션 ==================== -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <span class="logo-icon">◆</span>
+                    <span class="logo-text">MAGNATE</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== 포트폴리오 헤더 ==================== -->
+    <section class="portfolio-hero dark-bg">
+        <div class="container">
+            <h1>Our Portfolio</h1>
+            <p>성공한 브랜드들의 이야기와 함께 성장해온 마그네이트코리아</p>
+        </div>
+    </section>
+
+    <!-- ==================== 필터 기능 ==================== -->
+    <section class="portfolio-section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="digital">Digital</button>
+                <button class="filter-btn" data-filter="video">Video</button>
+                <button class="filter-btn" data-filter="social">Social</button>
+            </div>
+
+            <!-- 포트폴리오 그리드 (15개 프로젝트) -->
+            <div class="portfolio-grid">
+                <!-- 1. Branding -->
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #FF6B35 0%, #FF8A50 100%);"></div>
+                        <div class="portfolio-overlay">
+                            <h4>Fashion Brand Logo</h4>
+                            <p>Branding</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Premium Fashion Brand</h4>
+                        <p class="portfolio-category">Branding · Logo Design</p>
+                        <p class="portfolio-result">🎯 브랜드 인지도 200% 증대</p>
+                    </div>
+                </div>
+
+                <!-- 2. Digital -->
+                <div class="portfolio-item" data-category="digital">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #2D2D2D 0%, #666666 100%);"></div>
+                        <div class="portfolio-overlay">
+                            <h4>E-Commerce Platform</h4>
+                            <p>Digital Marketing</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>E-Commerce Site</h4>
+                        <p class="portfolio-category">Digital · SEO</p>
+                        <p class="portfolio-result">📈 검색 트래픽 350% 증가</p>
+                    </div>
+                </div>
+
+                <!-- 3. Video -->
+                <div class="portfolio-item" data-category="video">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #FF6B35 0%, #1A1A1A 100%);"></div>
+                        <div class="portfolio-overlay">
+                            <h4>Product Launch Video</h4>
+                            <p>Video Production</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Tech Product Launch</h4>
+                        <p class="portfolio-category">Video · Motion</p>
+                        <p class="portfolio-result">💰 캠페인 조회수 500만+</p>
+                    </div>
+                </div>
+
+                <!-- 4. Social -->
+                <div class="portfolio-item" data-category="social">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #FF8A50 0%, #FF6B35 100%);"></div>
+                        <div class="portfolio-overlay">
+                            <h4>Instagram Campaign</h4>
+                            <p>Social Media</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Beauty Brand</h4>
+                        <p class="portfolio-category">Social · Content</p>
+                        <p class="portfolio-result">❤️ 인스타 팔로워 5만명 증가</p>
+                    </div>
+                </div>
+
+                <!-- 5. Branding -->
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #666666 0%, #FF6B35 100%);"></div>
+                        <div class="portfolio-overlay">
+                            <h4>Corporate Rebranding</h4>
+                            <p>Branding</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Corporate Client</h4>
+                        <p class="portfolio-category">Branding · Strategy</p>
+                        <p class="portfolio-result">🏆 업계 상 수상</p>
+                    </div>
+                </div>
+
+                <!-- 6. Digital -->
+                <div class="portfolio-item" data-category="digital">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #1A1A1A 0%, #FF8A50 100%);"></div>
+                        <div class="portfolio-overlay">
+                            <h4>Google Ads Campaign</h4>
+                            <p>Digital Marketing</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Financial Services</h4>
+                        <p class="portfolio-category">Digital · PPC</p>
+                        <p class="portfolio-result">📊 전환율 180% 향상</p>
+                    </div>
+                </div>
+
+                <!-- 7. Video -->
+                <div class="portfolio-item" data-category="video">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #FF6B35 0%, #2D2D2D 100%);"></div>
+                        <div class="portfolio-overlay">
+                            <h4>Brand Documentary</h4>
+                            <p>Video Production</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Lifestyle Brand</h4>
+                        <p class="portfolio-category">Video · Storytelling</p>
+                        <p class="portfolio-result">🎬 영상 공유수 200만+</p>
+                    </div>
+                </div>
+
+                <!-- 8. Social -->
+                <div class="portfolio-item" data-category="social">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #FF8A50 0%, #666666 100%);"></div>
+                        <div class="portfolio-overlay">
+                            <h4>TikTok Viral Campaign</h4>
+                            <p>Social Media</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>F&B Brand</h4>
+                        <p class="portfolio-category">Social · Viral</p>
+                        <p class="portfolio-result">🚀 틱톡 뷰 1000만+</p>
+                    </div>
+                </div>
+
+                <!-- 9. Branding -->
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #2D2D2D 0%, #FF8A50 100%);"></div>
+                        <div class="portfolio-overlay">
+                            <h4>Brand Identity System</h4>
+                            <p>Branding</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Startup Brand</h4>
+                        <p class="portfolio-category">Branding · Identity</p>
+                        <p class="portfolio-result">⭐ 브랜드 친인도 95%</p>
+                    </div>
+                </div>
+
+                <!-- 10. Digital -->
+                <div class="portfolio-item" data-category="digital">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #FF6B35 0%, #666666 100%);"></div>
+                        <div class="portfolio-overlay">
+                            <h4>Content Marketing</h4>
+                            <p>Digital Marketing</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Education Platform</h4>
+                        <p class="portfolio-category">Digital · Content</p>
+                        <p class="portfolio-result">📝 월간 블로그 방문 10만+</p>
+                    </div>
+                </div>
+
+                <!-- 11. Video -->
+                <div class="portfolio-item" data-category="video">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #1A1A1A 0%, #FF6B35 100%);"></div>
+                        <div class="portfolio-overlay">
+                            <h4>Animated Explainer</h4>
+                            <p>Video Production</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>SaaS Company</h4>
+                        <p class="portfolio-category">Video · Animation</p>
+                        <p class="portfolio-result">✨ 가입 전환율 45% 증대</p>
+                    </div>
+                </div>
+
+                <!-- 12. Social -->
+                <div class="portfolio-item" data-category="social">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #FF8A50 0%, #1A1A1A 100%);"></div>
+                        <div class="portfolio-overlay">
+                            <h4>Facebook Ad Series</h4>
+                            <p>Social Media</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Retail Brand</h4>
+                        <p class="portfolio-category">Social · Advertising</p>
+                        <p class="portfolio-result">💳 매출 증대 280%</p>
+                    </div>
+                </div>
+
+                <!-- 13. Branding -->
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #666666 0%, #FF8A50 100%);"></div>
+                        <div class="portfolio-overlay">
+                            <h4>Packaging Design</h4>
+                            <p>Branding</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Food Product</h4>
+                        <p class="portfolio-category">Branding · Design</p>
+                        <p class="portfolio-result">🎁 판매량 120% 증가</p>
+                    </div>
+                </div>
+
+                <!-- 14. Digital -->
+                <div class="portfolio-item" data-category="digital">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #FF6B35 0%, #2D2D2D 100%);"></div>
+                        <div class="portfolio-overlay">
+                            <h4>Email Marketing</h4>
+                            <p>Digital Marketing</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>E-Commerce Store</h4>
+                        <p class="portfolio-category">Digital · Email</p>
+                        <p class="portfolio-result">📧 오픈율 38%</p>
+                    </div>
+                </div>
+
+                <!-- 15. Video -->
+                <div class="portfolio-item" data-category="video">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #2D2D2D 0%, #FF6B35 100%);"></div>
+                        <div class="portfolio-overlay">
+                            <h4>Live Event Coverage</h4>
+                            <p>Video Production</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Premium Event</h4>
+                        <p class="portfolio-category">Video · Live Stream</p>
+                        <p class="portfolio-result">📺 라이브 시청자 50만+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 클라이언트 피드백 ==================== -->
+    <section class="testimonials dark-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2>Client Testimonials</h2>
+                <p>고객들이 말하는 마그네이트코리아</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"마그네이트코리아와의 협업은 우리 브랜드의 전환점이 되었습니다. 창의적인 솔루션과 데이터 기반의 전략으로 매출을 3배 증대할 수 있었습니다."</p>
+                    <p class="client-name">- 이순신 CEO, 프리미엄 패션 브랜드</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"전문적이고 신뢰할 수 있는 팀입니다. 마케팅 전략부터 실행까지 모든 과정을 함께하며 성과를 달성했습니다."</p>
+                    <p class="client-name">- 김영희 마케팅 이사, 기술 기업</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"SNS 마케팅에서 뛰어난 성과를 만들어냈습니다. 우리 타겟 고객을 정확히 이해하고 그들에게 맞는 콘텐츠를 제작해 주었습니다."</p>
+                    <p class="client-name">- 박준호 대표, 뷰티 브랜드</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA 섹션 ==================== -->
+    <section class="portfolio-cta">
+        <div class="container">
+            <h2>당신의 브랜드 성공 사례를 만들어보세요</h2>
+            <p>마그네이트코리아와 함께 시작하세요</p>
+            <a href="index.html#contact" class="btn btn-primary">상담 신청하기</a>
+        </div>
+    </section>
+
+    <!-- ==================== 푸터 ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>MAGNATE KOREA</h4>
+                    <p>창의적인 광고 솔루션을 제공하는 전문 대행사</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#branding">Branding</a></li>
+                        <li><a href="services.html#digital">Digital Marketing</a></li>
+                        <li><a href="services.html#content">Content</a></li>
+                        <li><a href="services.html#video">Video Production</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" title="Instagram">Instagram</a>
+                        <a href="#" title="Facebook">Facebook</a>
+                        <a href="#" title="LinkedIn">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MAGNATE KOREA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

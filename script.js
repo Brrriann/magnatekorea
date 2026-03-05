@@ -170,5 +170,94 @@ window.addEventListener('load', () => {
     });
 });
 
+// ==================== 포트폴리오 필터링 ====================
+const filterButtons = document.querySelectorAll('.filter-btn');
+const portfolioItems = document.querySelectorAll('[data-category]');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // 활성 버튼 변경
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // 필터링
+        const filter = button.getAttribute('data-filter');
+
+        portfolioItems.forEach(item => {
+            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                item.style.display = 'block';
+                setTimeout(() => {
+                    item.style.animation = 'fadeInUp 0.6s ease forwards';
+                }, 0);
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+});
+
+// ==================== 통계 숫자 애니메이션 ====================
+const animateStats = () => {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    let hasAnimated = false;
+
+    const countUp = (element, target) => {
+        let current = 0;
+        const increment = target / 50;
+
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+
+            // 숫자에 따라 포맷팅
+            if (element.textContent.includes('%')) {
+                element.textContent = Math.floor(current) + '%';
+            } else if (element.textContent.includes('+')) {
+                element.textContent = Math.floor(current) + '+';
+            } else {
+                element.textContent = Math.floor(current);
+            }
+        }, 30);
+    };
+
+    const statsSection = document.querySelector('.stats');
+    if (statsSection) {
+        const observeStats = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting && !hasAnimated) {
+                hasAnimated = true;
+                statNumbers.forEach(element => {
+                    const text = element.textContent;
+                    let target = 0;
+
+                    if (text.includes('500')) target = 500;
+                    else if (text.includes('150')) target = 150;
+                    else if (text.includes('98')) target = 98;
+                    else if (text.includes('12')) target = 12;
+
+                    if (target > 0) {
+                        countUp(element, target);
+                    }
+                });
+
+                observeStats.unobserve(entries[0].target);
+            }
+        }, observerOptions);
+
+        observeStats.observe(statsSection);
+    }
+};
+
+animateStats();
+
+// ==================== 추가 카드 애니메이션 ====================
+document.querySelectorAll('.service-card, .news-card, .testimonial-card').forEach((card, index) => {
+    card.style.opacity = '0';
+    card.style.animationDelay = `${index * 0.1}s`;
+    observer.observe(card);
+});
+
 // ==================== 페이지 로드 시작 ====================
 console.log('MAGNATE KOREA - Website Loaded Successfully');
