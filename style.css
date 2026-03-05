@@ -8,13 +8,13 @@
     --color-accent-light: #00FF88;     /* 밝은 네온 그린 - 강조 */
     --color-accent-dark: #00CC33;      /* 다크 네온 그린 - 호버 */
     --color-secondary: #1A1A1A;        /* 다크 차콜 - 배경 */
-    --color-tertiary: #FFFFFF;         /* 화이트 - 텍스트/카드 */
-    --color-neutral: #888888;          /* 밝은 그레이 - 보조 텍스트 */
+    --color-tertiary: #2A2A2A;         /* 다크 그레이 - 텍스트/카드 */
+    --color-neutral: #888888;          /* 그레이 - 보조 텍스트 */
     --color-neutral-light: #AAAAAA;    /* 라이트 그레이 */
 
     /* Additional Colors */
-    --color-light-bg: #F8F8F8;         /* 라이트 배경 */
-    --color-border: #E0E0E0;           /* 보더 */
+    --color-light-bg: #1F1F1F;         /* 다크 그레이 배경 */
+    --color-border: #454545;           /* 다크 보더 */
     --color-success: #00FF41;          /* 성공 - 네온 그린 */
     --color-error: #FF3333;            /* 에러 - 빨간색 */
 
@@ -67,8 +67,8 @@ html {
 
 body {
     font-family: var(--font-body);
-    color: var(--color-primary);
-    background-color: var(--color-tertiary);
+    color: #FFFFFF;
+    background-color: var(--color-primary);
     line-height: var(--line-height-normal);
     letter-spacing: var(--letter-spacing-normal);
     overflow-x: hidden;
@@ -105,14 +105,14 @@ section.dark-bg {
     font-size: var(--size-h2);
     font-weight: 700;
     margin-bottom: var(--space-md);
-    color: var(--color-primary);
+    color: #FFFFFF;
     letter-spacing: var(--letter-spacing-tight);
     line-height: var(--line-height-tight);
 }
 
 .section-header p {
     font-size: 1.1875rem;
-    color: var(--color-neutral);
+    color: rgba(255, 255, 255, 0.7);
     font-weight: 400;
     line-height: var(--line-height-normal);
     letter-spacing: var(--letter-spacing-normal);
@@ -180,9 +180,9 @@ section.dark-bg {
 .navbar {
     position: sticky;
     top: 0;
-    background: rgba(255, 255, 255, 0.98);
+    background: rgba(15, 15, 15, 0.98);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid #404040;
     z-index: 1000;
     padding: 1rem 0;
 }
@@ -200,7 +200,7 @@ section.dark-bg {
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.5rem;
-    color: var(--color-primary);
+    color: #FFFFFF;
     text-decoration: none;
     cursor: pointer;
 }
@@ -218,7 +218,7 @@ section.dark-bg {
 
 .nav-link {
     text-decoration: none;
-    color: var(--color-primary);
+    color: #FFFFFF;
     font-weight: 500;
     position: relative;
     transition: color var(--transition);
@@ -256,7 +256,7 @@ section.dark-bg {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background-color: var(--color-primary);
+    background-color: #FFFFFF;
     transition: all var(--transition);
 }
 
@@ -395,13 +395,14 @@ section.dark-bg {
     background: var(--color-tertiary);
     padding: var(--space-xl) var(--space-lg);
     border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
     transition: all var(--transition);
     text-align: center;
     border: 1px solid var(--color-border);
     display: flex;
     flex-direction: column;
     height: 100%;
+    color: #FFFFFF;
 }
 
 .about-card:hover {
@@ -419,7 +420,7 @@ section.dark-bg {
 .about-card h3 {
     font-family: var(--font-heading);
     font-size: var(--size-h4);
-    color: var(--color-primary);
+    color: #FFFFFF;
     margin-bottom: var(--space-md);
     font-weight: 700;
     letter-spacing: var(--letter-spacing-tight);
@@ -427,7 +428,7 @@ section.dark-bg {
 }
 
 .about-card p {
-    color: var(--color-neutral);
+    color: rgba(255, 255, 255, 0.8);
     line-height: var(--line-height-loose);
     font-size: 1rem;
     letter-spacing: var(--letter-spacing-normal);
@@ -447,21 +448,22 @@ section.dark-bg {
     padding: var(--space-2xl);
     border-radius: 8px;
     border-left: 4px solid var(--color-accent);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: #FFFFFF;
 }
 
 .mission h3,
 .vision h3 {
     font-family: var(--font-heading);
     font-size: var(--size-h4);
-    color: var(--color-primary);
+    color: #FFFFFF;
     margin-bottom: var(--space-md);
     font-weight: 600;
 }
 
 .mission p,
 .vision p {
-    color: var(--color-neutral);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 1.1rem;
     line-height: 1.8;
 }
@@ -488,11 +490,12 @@ section.dark-bg {
     border-radius: 12px;
     overflow: hidden;
     transition: all var(--transition);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
     border: 1px solid var(--color-border);
     display: flex;
     flex-direction: column;
     height: 100%;
+    color: #FFFFFF;
 }
 
 .portfolio-item:hover {
@@ -559,7 +562,7 @@ section.dark-bg {
 .portfolio-info h4 {
     font-family: var(--font-heading);
     font-size: 1.25rem;
-    color: var(--color-primary);
+    color: #FFFFFF;
     margin-bottom: var(--space-sm);
     font-weight: 700;
     letter-spacing: var(--letter-spacing-normal);
@@ -567,7 +570,7 @@ section.dark-bg {
 }
 
 .portfolio-category {
-    color: var(--color-neutral);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 0.9375rem;
     margin-bottom: var(--space-sm);
     font-weight: 500;
@@ -605,12 +608,13 @@ section.dark-bg {
     padding: var(--space-xl) var(--space-lg);
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
     transition: all var(--transition);
     border: 1px solid var(--color-border);
     display: flex;
     flex-direction: column;
     height: 100%;
+    color: #FFFFFF;
 }
 
 .team-member:hover {
@@ -637,7 +641,7 @@ section.dark-bg {
 .team-member h4 {
     font-family: var(--font-heading);
     font-size: 1.1rem;
-    color: var(--color-primary);
+    color: #FFFFFF;
     margin-bottom: var(--space-sm);
     font-weight: 600;
 }
@@ -903,6 +907,7 @@ section.dark-bg {
 
 .stat-card {
     text-align: center;
+    color: #FFFFFF;
 }
 
 .stat-number {
@@ -914,7 +919,7 @@ section.dark-bg {
 }
 
 .stat-label {
-    color: var(--color-neutral);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 1.1rem;
 }
 
@@ -934,7 +939,7 @@ section.dark-bg {
     padding: var(--space-xl);
     border-radius: 8px;
     text-align: center;
-    color: var(--color-neutral);
+    color: rgba(255, 255, 255, 0.7);
     font-weight: 600;
     transition: all var(--transition);
     border: 2px solid transparent;
@@ -960,13 +965,14 @@ section.dark-bg {
     background: var(--color-tertiary);
     padding: var(--space-xl);
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: all var(--transition);
+    color: #FFFFFF;
 }
 
 .news-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(255, 107, 53, 0.15);
+    box-shadow: 0 12px 30px rgba(0, 255, 65, 0.15);
 }
 
 .news-date {
@@ -979,13 +985,13 @@ section.dark-bg {
 .news-card h3 {
     font-family: var(--font-heading);
     font-size: var(--size-h4);
-    color: var(--color-primary);
+    color: #FFFFFF;
     margin-bottom: var(--space-md);
     font-weight: 600;
 }
 
 .news-card p {
-    color: var(--color-neutral);
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: var(--space-md);
     line-height: 1.8;
 }
@@ -1012,11 +1018,12 @@ section.dark-bg {
     font-size: var(--size-h1);
     font-weight: 700;
     margin-bottom: var(--space-md);
+    color: #FFFFFF;
 }
 
 .service-hero p {
     font-size: var(--size-h4);
-    color: #999999;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 /* 서비스 상세 섹션 */
@@ -1036,16 +1043,18 @@ section.dark-bg {
     font-size: var(--size-h2);
     font-weight: 700;
     margin-bottom: var(--space-lg);
+    color: #FFFFFF;
 }
 
 .dark-bg .service-detail-text h2 {
-    color: var(--color-tertiary);
+    color: #FFFFFF;
 }
 
 .service-detail-text > p {
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: var(--space-lg);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .dark-bg .service-detail-text > p {
@@ -1062,6 +1071,7 @@ section.dark-bg {
     position: relative;
     line-height: 1.8;
     font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .service-list li::before {
@@ -1171,11 +1181,12 @@ section.dark-bg {
     font-size: var(--size-h1);
     font-weight: 700;
     margin-bottom: var(--space-md);
+    color: #FFFFFF;
 }
 
 .portfolio-hero p {
     font-size: var(--size-h4);
-    color: #999999;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 /* 포트폴리오 섹션 */
@@ -1194,9 +1205,9 @@ section.dark-bg {
 
 .filter-btn {
     padding: var(--space-sm) var(--space-lg);
-    border: 2px solid var(--color-neutral);
+    border: 2px solid #666666;
     background: transparent;
-    color: var(--color-primary);
+    color: #FFFFFF;
     font-family: var(--font-heading);
     font-weight: 600;
     cursor: pointer;
